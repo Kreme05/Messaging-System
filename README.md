@@ -1,50 +1,61 @@
-# CS-115 Programming II - Coursework 1: Spies!
-> ⚠️ Academic Integrity Notice  
-> The code in this repository is part of my university coursework. It is shared for learning and portfolio purposes only. Please do not copy or submit this as your own work in any course or assignment.
+## Project Structure - Secret Agent Messaging System
+- A modular Java project that models secure communication between agents, featuring auto-incremented IDs, security clearances, messaging with encryption, and a custom inbox system.
 
-## Assignment Structure
-
+## 📌 Features by Stage
 ### Stage 1: Agent Class
-- Attributes: `agentName`, `codeName`, `UID`, `agentID`
-- `agentID` auto-increments from 549321
-- Encapsulation through getters/setters
-- `UID` is `codeName@agentID`
-- Includes a `toString()` method
+- Attributes: agentName, codeName, UID, agentID (starts from 549321)
+- UID format: codeName@agentID
+- Auto-incremented agentID
+- Full encapsulation with getters/setters
+- toString() method for agent details
 
-### Stage 2: AgentUnitTest
-- Four static test methods:
-  - `testConstructorAndGetters()`
-  - `testSetters()`
-  - `testAgentIDs()`
-  - `testToString()`
-- Outputs test results to the console
+### Stage 2: Unit Testing
+- AgentUnitTest contains:
+  - testConstructorAndGetters()
+  - testSetters()
+  - testAgentIDs()
+  - testToString()
+-Prints test results to console
 
 ### Stage 3: Clearance Enum
-- Enum values: `LEVEL1A`, `LEVEL1B`, `LEVEL2`, `LEVEL3`
-- `agentClearance` added to Agent class
-- Overloaded constructor and `getAgentInfo()` method
+- Enum: LEVEL1A, LEVEL1B, LEVEL2, LEVEL3
+- agentClearance field added to Agent
+- Overloaded constructor supports clearance
+- getAgentInfo() method returns extended agent info
 
 ### Stage 4: Message Class
-- Attributes: `from`, `to` (Agent), `contents` (String)
-- Encapsulation and a `toString()` method that formats output:
+- Attributes: from (Agent), to (Agent), contents (String)
+- Fully encapsulated
+- toString() for formatted message output
 
-### Stage 5: Inbox (Linked List)
-- Each Message includes a `next` pointer
-- `Inbox` has:
-- `receive(Message)`
-- `read()`: LIFO reading and removal
-- `printAll()`: recursive message printing ending with `<no more messages>`
+### Stage 5: Inbox System (LIFO Linked List)
+- Message objects include next pointer
+- Inbox class supports:
+  - receive(Message msg)
+  - read() – removes & returns latest message
+  - printAll() – recursively prints messages ending with <no more messages>
 
 ### Stage 6: Message Encoding
-- Added `encoded[]` (int array)
-- `encode()` method converts `contents` to ASCII codes
-- `getEncoded()` returns formatted output
+- encoded[]: stores ASCII values of contents
+- encode() converts contents to ASCII
+- getEncoded(): returns formatted output of encoded[]
 
-## Stage 7: Encrypting & Decrypting
--`encrypted[]` and decrypted[] arrays added to Message class
-- `encrypt(int key)` method for Caesar cipher encryption
-- `decrypt(int key)` method for decrypting the message
-- `debugString()` method for debugging message states
+### Stage 7: Encryption & Decryption
+- Encryption Method: Caesar cipher
+- Fields: encrypted[], decrypted[]
+  - encrypt(int key) – shifts characters
+  - decrypt(int key) – reverses the shift
+- debugString() – shows encoded/encrypted/decrypted message states
+
+### 🚀 How to Run
+- Compile all .java files.
+- Run AgentUnitTest to verify functionality.
+- Use the Agent, Message, and Inbox classes to simulate secure communication.
+
+### 🔧 Technologies
+- Java (OOP, Linked Lists, Enums)
+- JUnit-style testing (manual)
+- Caesar Cipher Encryption
 
 ## Learning Outcomes
 - The importance of a testing code from each class
