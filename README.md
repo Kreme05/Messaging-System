@@ -1,4 +1,4 @@
-## Project Structure - Secret Agent Messaging System
+## Project Structure - Messaging System
 - A modular Java project that models secure communication between agents, featuring auto-incremented IDs, security clearances, messaging with encryption, and a custom inbox system.
 
 ## 📌 Features by Stage
