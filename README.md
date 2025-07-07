@@ -2,6 +2,7 @@
 - A modular Java project that models secure communication between agents, featuring auto-incremented IDs, security clearances, messaging with encryption, and a custom inbox system.
 
 ## Project Screenshot
+![38d6d1fc-cf34-4d4d-b50f-d3014a74a3b6](https://github.com/user-attachments/assets/c5450fb4-2019-4926-84be-60071590da98)
 
 
 
