@@ -1,6 +1,10 @@
 ## Project Structure - Messaging System
 - A modular Java project that models secure communication between agents, featuring auto-incremented IDs, security clearances, messaging with encryption, and a custom inbox system.
 
+## Project Screenshot
+
+
+
 ## 📌 Features by Stage
 ### Stage 1: Agent Class
 - Attributes: agentName, codeName, UID, agentID (starts from 549321)
